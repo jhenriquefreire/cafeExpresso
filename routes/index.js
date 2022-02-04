@@ -1,12 +1,15 @@
 var express = require('express');
-const contato = require('../controllers/contatoController')
 var router = express.Router();
+
+
+let info = {
+  nome: 'Curso Café Expresso',
+  cursos: ['full stack', 'mobile android', 'marketing digital']
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', info);
 });
-
-router.get('/contato', contato.index)
 
 module.exports = router;
