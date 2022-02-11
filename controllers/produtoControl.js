@@ -12,7 +12,7 @@ const produto = {
     index: (req, res) => {
         let {id} = req.params
             if (id == undefined){
-                res.send('Página inicial dos produtos')
+                res.render('produto')
             }
             else{
                 res.send('Este é o produto ' + id)
